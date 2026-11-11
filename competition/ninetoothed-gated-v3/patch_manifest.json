@@ -1,0 +1,84 @@
+{
+  "commits": {
+    "InfiniCore": "f32e2fbb2a9b2ca912b5711f4f3836c403196a74",
+    "InfiniLM": "65deb91f840ebaef752d028fad2f3217ce0950f4"
+  },
+  "files": [
+    {
+      "repo": "InfiniCore",
+      "path": "include/infinicore/ops/gated_residual.hpp",
+      "before": null,
+      "after": "7b8faf622e66b12559d55062024f9c062e46ea23fa6bf571f8b3bade09c1b650"
+    },
+    {
+      "repo": "InfiniCore",
+      "path": "include/infinicore/ops.hpp",
+      "before": "a16b27dc462130f9c5fa061510d13ffa635ce3034dc95b00efeca5ff4eee7288",
+      "after": "55536647ba402d9e31ac830e651bf12db442547defa17f9a89e115fed28d35b2"
+    },
+    {
+      "repo": "InfiniCore",
+      "path": "src/infinicore/ops/gated_residual/gated_residual.cc",
+      "before": null,
+      "after": "50f6a83a19eeb0e23361d4412a3740baac4aab0b047407a9f45bd7f1439ae0a6"
+    },
+    {
+      "repo": "InfiniCore",
+      "path": "src/infinicore/ops/gated_residual/gated_residual_hygon.cc",
+      "before": null,
+      "after": "45fde8c86d4f5d65f96e4b3a053033b4d90b4f398bf62448bab6f90822dea5dd"
+    },
+    {
+      "repo": "InfiniCore",
+      "path": "src/infinicore/pybind11/ops/gated_residual.hpp",
+      "before": null,
+      "after": "20bb1c5e5361a7c1b0b4de57397c0723ac62c02cddd188e0e5d1d2cbb2f17241"
+    },
+    {
+      "repo": "InfiniCore",
+      "path": "src/infinicore/pybind11/ops.hpp",
+      "before": "0753a71d281b5649013d79d827dbb89cfb0552883c1fb52f69237dc80108dad2",
+      "after": "b7a5341edbfe0d0bc9a08f73e462c71542b0671d9c02e6828a0bb2843f64f313"
+    },
+    {
+      "repo": "InfiniCore",
+      "path": "python/infinicore/ops/gated_residual.py",
+      "before": null,
+      "after": "aeae7b7e0d171607fc70f0af2dd8046f20e017d23431da4243d577ff58963e98"
+    },
+    {
+      "repo": "InfiniCore",
+      "path": "python/infinicore/__init__.py",
+      "before": "67288c265057f6e5c44b5a662e1ba331f9b4338bd4b3c71cbca5ebc06a6a277e",
+      "after": "040261e948d090df304eceb060df502d34a6264525a9ef6d5b5fbdfc8d65a7e4"
+    },
+    {
+      "repo": "InfiniLM",
+      "path": "csrc/models/minimax_h3/minimax_h3_transformer.cpp",
+      "before": "90de0ebeddb0dab86805657323f1fe59a40116e3bb1f9b394c59aafb5c4a53bb",
+      "after": "c881444814a634ea3b90446f08622c7e2343861df13accaafa395ee9b942aa1a"
+    }
+  ],
+  "prerequisites": [
+    {
+      "repo": "InfiniCore",
+      "path": "src/infinicore/ops/multi_head_attention/mha.cc",
+      "sha256": "42b7805a154495e73fee1e1bb28943dd3a872f002823e3a8bb04c34e113f3349"
+    },
+    {
+      "repo": "InfiniCore",
+      "path": "src/infinicore/ops/multi_head_attention/mha_hygon_infiniop.cc",
+      "sha256": "b69007323389bd6a5c4908a40a96fb2e4b617a2bf008ce7ff3701d53f4d9a976"
+    },
+    {
+      "repo": "InfiniLM",
+      "path": "csrc/models/qwen3_5/qwen3_5_vision.cpp",
+      "sha256": "acbf812ef3c0348cd71eabc9032a0841f0bc92a83f4a8365dbb6407ba2fa363a"
+    },
+    {
+      "repo": "InfiniLM",
+      "path": "csrc/models/qwen3_5/qwen3_5_vision.hpp",
+      "sha256": "3fb755404fcc8a74c2a8df6b20259edd477c91f39dce55ca93fa4173199eefa7"
+    }
+  ]
+}

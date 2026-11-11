@@ -7,6 +7,7 @@
 #include "ops/adaptive_avg_pool3d.hpp"
 #include "ops/adaptive_max_pool1d.hpp"
 #include "ops/add.hpp"
+#include "ops/gated_residual.hpp"
 #include "ops/add_rms_norm.hpp"
 #include "ops/addbmm.hpp"
 #include "ops/addcmul.hpp"
@@ -174,6 +175,7 @@ namespace py = pybind11;
 namespace infinicore::ops {
 
 inline void bind(py::module &m) {
+    bind_gated_residual(m);
 #ifdef ENABLE_VENDOR_OPS
     bind_concat_and_cache_mla(m);
     bind_concat_and_cache_mla_int8(m);

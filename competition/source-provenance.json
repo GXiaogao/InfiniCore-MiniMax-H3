@@ -1,0 +1,9 @@
+{
+  "component": "InfiniCore",
+  "upstream_commit": "f32e2fbb2a9b2ca912b5711f4f3836c403196a74",
+  "source_scope": "report v0.2 verified candidate, not later Attention/BF16 experiments",
+  "upstream_license_preserved": true,
+  "server_has_git_metadata": false,
+  "no_claim_of_new_binary_build_or_model_correctness": true,
+  "fixed_archive_sha256": "37414edbc25545063462a3cbe47811ca0a672378058d78b761ec36e6fc3f8811"
+}

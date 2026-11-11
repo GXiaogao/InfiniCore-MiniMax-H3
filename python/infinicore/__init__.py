@@ -51,6 +51,7 @@ from infinicore.dtype import (
 )
 from infinicore.ops.acos import acos
 from infinicore.ops.add import add
+from infinicore.ops.gated_residual import gated_residual
 from infinicore.ops.add_rms_norm import add_rms_norm, add_rms_norm_inplace
 from infinicore.ops.addbmm import addbmm
 from infinicore.ops.addcmul import addcmul

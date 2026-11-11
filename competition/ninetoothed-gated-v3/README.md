@@ -30,3 +30,5 @@ run_logged h3_gated_rounding_v3.log bash "$WORK_HOME/scripts/h3-gated-rounding-v
 - 本地另从实际 Triton 3.8.0 wheel 提取并执行 `scalar_constant` 方法，用有类型的NumPy存储替代IR builder验证常量转换边界；旧表达出现5个负零位模式错误，修正后6个抵消/正负零用例通过。这项宿主测试不等同于整套GPU编译器或DCU验证。
 - TwoSum使用严格FP32中间计算，禁止FMA收缩；正有限溢出、负溢出、精确抵消和带符号零单独处理。模型数据有限；不扩展NaN payload契约。
 - 不代表完整官方模型、视频、多卡或性能验证，未宣称提速。新增FP32补偿运算的成本需后续实测。
+
+Historical snapshot notice: check_sources.py pins the original development HEAD and LM source hash; it is not a validation entry for this new public Git branch. Do not run its old bootstrap/run.sh on gfx936 and interpret that as new-model validation. The code is retained to audit the gfx906 kernel provenance; public-source build instructions are in ../README.md.

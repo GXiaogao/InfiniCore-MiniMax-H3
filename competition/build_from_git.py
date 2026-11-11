@@ -7,6 +7,7 @@ Its host profiles follow the historical InfiniFabric builders. Device rebuild pe
 import argparse
 import datetime
 import io
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -22,6 +23,13 @@ import zipfile
 def once(text,old,new):
     if text.count(old)!=1:raise ValueError('unexpected build source anchor: '+old)
     return text.replace(old,new,1)
+
+
+def verify_dependency(path,expected):
+    with Path(path).open('rb') as stream:actual=hashlib.file_digest(stream,'sha256').hexdigest()
+    if actual!=expected:raise ValueError('offline dependency SHA256 differs: '+str(path))
+    print('dependency_sha256='+actual+' file='+str(path),flush=True)
+    return actual
 
 
 def configure_text(text,component,profile):
@@ -75,6 +83,7 @@ def build(profile,log):
                XMAKE_RAMDIR=str(local/'tmp'),TMPDIR=str(local/'tmp'),XMAKE_STATS='false',XMAKE_THEME='plain')
     for folder in [local/'global/.xmake',local/'tmp',prefix,site]:folder.mkdir(parents=True,exist_ok=True)
     packages=work/'packages'
+    verify_dependency(packages/'xmake-repo-cache.tar.gz','802f2a0839e2d98f7679712df573cd681a9494b768cce38337ebbcb3a5d39984')
     with tarfile.open(packages/'xmake-repo-cache.tar.gz') as archive:archive.extractall(local/'global',filter='data')
     xmake=project/'xmake.lua';xmake.write_text(configure_text(xmake.read_text(encoding='utf-8'),component,profile),encoding='utf-8',newline='\n')
     if component=='InfiniCore' and profile=='native':
@@ -82,6 +91,7 @@ def build(profile,log):
         old='    add_files("../src/infiniop/devices/cpu/*.cc", "../src/infiniop/ops/*/cpu/*.cc", "../src/infiniop/reduce/cpu/*.cc")\n'
         path.write_text(once(path.read_text(encoding='utf-8'),old,''),encoding='utf-8',newline='\n')
     if profile!='native':
+        verify_dependency(packages/'pybind11-v3.1.0.zip','affea1ada7b39fe1d835559fcb78800c7927d514bd480ed01b71b88205a5e536')
         with zipfile.ZipFile(packages/'pybind11-v3.1.0.zip') as archive:archive.extractall(local/'pybind')
         include=local/'pybind/pybind11-3.1.0/include'
         if not (include/'pybind11/pybind11.h').is_file():raise ValueError('offline pybind header missing')

@@ -1,0 +1,25 @@
+{
+  "scope": "text-only ABI/LDS regression fixture; not a launchable binary",
+  "files": [
+    {
+      "file": "launch-schema.json",
+      "original_sha256": "f95e6217ef6013670ef93ef90ac27a5d3a09159e67a090d8b5def03550017a5b",
+      "published_sha256": "f95e6217ef6013670ef93ef90ac27a5d3a09159e67a090d8b5def03550017a5b"
+    },
+    {
+      "file": "metadata.json",
+      "original_sha256": "ae5bba086916b8b6f56e38a944f13b65a2e5f304fca326d874bfa1218c911408",
+      "published_sha256": "d45886006c9b45ce1be635651e449b36a3793a39135f998929ddea97f508a47d"
+    },
+    {
+      "file": "kernel.amdgcn",
+      "original_sha256": "74229edc5d893d21995242388d0ebad4548a2413c4d9cbc3c1ea39e5409fce84",
+      "published_sha256": "458ebc5b31548b1bf360b571800b6001226c0d57ca69a6e6aa33f112634b0d98"
+    },
+    {
+      "file": "kernel.llir",
+      "original_sha256": "e471243fb524a5038b9ced3523313e2e599fe0fa05ab3a09410269b1d5c2ee62",
+      "published_sha256": "74bab75c7838bb5b46ccd9517889c58d61e3863f680cbda940598e7418fb2ee9"
+    }
+  ]
+}

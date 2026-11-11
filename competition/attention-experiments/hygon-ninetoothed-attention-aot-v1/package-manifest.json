@@ -1,0 +1,39 @@
+{
+  "version": "1.1-nine-attention-aot-dynamic-lds",
+  "validation_scope": "source-upload-not-device-verified",
+  "upstream": {
+    "commit": "f32e2fbb2a9b2ca912b5711f4f3836c403196a74",
+    "path": "src/infiniop/ops/flash_attention/ninetoothed/flash_attention.py",
+    "sha256": "b0039b78b9693b32fec36701424a9773b72aeb0688fe5d52c58faa99f428f1ca",
+    "modified": false
+  },
+  "candidate": {
+    "profile": "positive-dynamic-kv-ceiling-div-v1",
+    "modified": true,
+    "original_sha256": "b0039b78b9693b32fec36701424a9773b72aeb0688fe5d52c58faa99f428f1ca",
+    "candidate_sha256": "5378d0f8dfa5c34aac83413e34094863864b273cbfb2bad4e43729c5748738c4",
+    "original_expression": "for j in range(-(-actual_kv_len // key.dtype.shape[0])):",
+    "candidate_expression": "for j in range((actual_kv_len + key.dtype.shape[0] - 1) // key.dtype.shape[0]):",
+    "compilation": "NineToothed expression and generation chain"
+  },
+  "files": {
+    "attention_contract.py": "b1e377f36c573e7f6c711d1d10b9afe61e335019737ff9b64eef2b62be6df8c2",
+    "attention_worker.py": "8b781c563deace38cd9e41763cdcbfaa945ec77a453a84265ef881192b8ab401",
+    "probe_primitives.py": "eb8cec89f96d037fc3ede8a76343d37cba584b79f134256ad947f63d9e831d59",
+    "run_attention_probe.py": "626b9ee4c96af7ecf623ecb8f70e14d74ca405e17c27af908aac71710a01403e",
+    "llvm_compat.py": "b5d50f942fbb430ee65fe527c68964f8ac7c94f8a4b4947b83b7c65032f29e68",
+    "upstream_attention.py": "b0039b78b9693b32fec36701424a9773b72aeb0688fe5d52c58faa99f428f1ca",
+    "candidate_attention.py": "5378d0f8dfa5c34aac83413e34094863864b273cbfb2bad4e43729c5748738c4",
+    "install_ninetoothed_gfx936.py": "eed758330bc66546c2235d02109f48efbd5b88c3d2e666557ee4269e3bd749a9",
+    "install_infinilm_private_runtime.py": "e7b811dba6fd51d1f52558bb7b93d89817c4dfd8db5da4449a27d60ae84cfe18",
+    "aot_contract.py": "050f996b4a087beb10b9947d1cc373fe0f2ca176d37b00751ba8bc949e74adfd",
+    "aot_export.py": "6755a44834446e8eca28211d8389db8c7e12c11793f8a4e8ee5cd7af02b4f154",
+    "aot_launcher.cpp": "59906bc9f7f18b431ac4137153e88dc2ca97922d804dc71284b0d6ab2d606f0e",
+    "aot_native.py": "b6e1837362a95a8c78781c2d64e572758b8c1839c1f316c36699d1634b4f8db8",
+    "aot_worker.py": "37b352d4aaae0b5966862aef114a33857431086212ceb24b5bae03ed089e4ea2",
+    "run_attention_aot.py": "a27a164392284e97562c442d67457afe8162bb33d7dd5049edfbbcefa804bcf6",
+    "run_hygon_attention_aot.sh": "4a83dfa2e78b8332ece569d6379204220e330d0b1e7ea8f3b9c1df0d536b9c72",
+    "LICENSE-InfiniCore-MIT.txt": "aa87e0f6ee3319a25f7986b65879e59a3449611ae2a483bd29133f3ea59f721a",
+    "UPLOAD.md": "3f5db2748ed4d1a3e649ec3a19f955ad7948b179f9b9adebb7ba65d8ad992289"
+  }
+}

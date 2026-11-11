@@ -1,0 +1,752 @@
+{
+  "kernel": "nine_attention_float16_d64_c0",
+  "dtype": "float16",
+  "causal": false,
+  "arg_names": [
+    "ninetoothed_constexpr_prefix_ninetoothed_tensor_11",
+    "ninetoothed_constexpr_prefix_ninetoothed_tensor_12",
+    "ninetoothed_constexpr_prefix_ninetoothed_tensor_13",
+    "ninetoothed_ninetoothed_tensor_0_pointer",
+    "ninetoothed_ninetoothed_tensor_0_size_0",
+    "ninetoothed_ninetoothed_tensor_0_size_1",
+    "ninetoothed_ninetoothed_tensor_0_size_2",
+    "ninetoothed_ninetoothed_tensor_0_stride_0",
+    "ninetoothed_ninetoothed_tensor_0_stride_1",
+    "ninetoothed_ninetoothed_tensor_0_stride_2",
+    "ninetoothed_ninetoothed_tensor_0_stride_3",
+    "ninetoothed_ninetoothed_tensor_1_pointer",
+    "ninetoothed_ninetoothed_tensor_1_size_0",
+    "ninetoothed_ninetoothed_tensor_1_size_1",
+    "ninetoothed_ninetoothed_tensor_1_size_2",
+    "ninetoothed_ninetoothed_tensor_1_stride_0",
+    "ninetoothed_ninetoothed_tensor_1_stride_1",
+    "ninetoothed_ninetoothed_tensor_1_stride_2",
+    "ninetoothed_ninetoothed_tensor_1_stride_3",
+    "ninetoothed_ninetoothed_tensor_2_pointer",
+    "ninetoothed_ninetoothed_tensor_2_size_0",
+    "ninetoothed_ninetoothed_tensor_2_size_1",
+    "ninetoothed_ninetoothed_tensor_2_size_2",
+    "ninetoothed_ninetoothed_tensor_2_stride_0",
+    "ninetoothed_ninetoothed_tensor_2_stride_1",
+    "ninetoothed_ninetoothed_tensor_2_stride_2",
+    "ninetoothed_ninetoothed_tensor_2_stride_3",
+    "ninetoothed_ninetoothed_tensor_3_pointer",
+    "ninetoothed_ninetoothed_tensor_3_size_0",
+    "ninetoothed_ninetoothed_tensor_3_size_1",
+    "ninetoothed_ninetoothed_tensor_3_size_2",
+    "ninetoothed_ninetoothed_tensor_3_stride_0",
+    "ninetoothed_ninetoothed_tensor_3_stride_1",
+    "ninetoothed_ninetoothed_tensor_3_stride_2",
+    "ninetoothed_ninetoothed_tensor_3_stride_3",
+    "ninetoothed_ninetoothed_tensor_4_pointer",
+    "ninetoothed_ninetoothed_tensor_4_size_0",
+    "ninetoothed_ninetoothed_tensor_4_size_1",
+    "ninetoothed_ninetoothed_tensor_4_size_2",
+    "ninetoothed_ninetoothed_tensor_4_stride_0",
+    "ninetoothed_ninetoothed_tensor_4_stride_1",
+    "ninetoothed_ninetoothed_tensor_4_stride_2",
+    "ninetoothed_ninetoothed_tensor_4_stride_3",
+    "ninetoothed_ninetoothed_tensor_5_pointer",
+    "ninetoothed_ninetoothed_tensor_5_size_0",
+    "ninetoothed_ninetoothed_tensor_5_stride_0",
+    "ninetoothed_tensor_10"
+  ],
+  "signature": {
+    "ninetoothed_constexpr_prefix_ninetoothed_tensor_11": "constexpr",
+    "ninetoothed_constexpr_prefix_ninetoothed_tensor_12": "constexpr",
+    "ninetoothed_constexpr_prefix_ninetoothed_tensor_13": "constexpr",
+    "ninetoothed_ninetoothed_tensor_0_pointer": "*fp16",
+    "ninetoothed_ninetoothed_tensor_0_size_0": "i64",
+    "ninetoothed_ninetoothed_tensor_0_size_1": "i64",
+    "ninetoothed_ninetoothed_tensor_0_size_2": "i64",
+    "ninetoothed_ninetoothed_tensor_0_stride_0": "i64",
+    "ninetoothed_ninetoothed_tensor_0_stride_1": "i64",
+    "ninetoothed_ninetoothed_tensor_0_stride_2": "i64",
+    "ninetoothed_ninetoothed_tensor_0_stride_3": "i64",
+    "ninetoothed_ninetoothed_tensor_1_pointer": "*fp16",
+    "ninetoothed_ninetoothed_tensor_1_size_0": "i64",
+    "ninetoothed_ninetoothed_tensor_1_size_1": "i64",
+    "ninetoothed_ninetoothed_tensor_1_size_2": "i64",
+    "ninetoothed_ninetoothed_tensor_1_stride_0": "i64",
+    "ninetoothed_ninetoothed_tensor_1_stride_1": "i64",
+    "ninetoothed_ninetoothed_tensor_1_stride_2": "i64",
+    "ninetoothed_ninetoothed_tensor_1_stride_3": "i64",
+    "ninetoothed_ninetoothed_tensor_2_pointer": "*fp16",
+    "ninetoothed_ninetoothed_tensor_2_size_0": "i64",
+    "ninetoothed_ninetoothed_tensor_2_size_1": "i64",
+    "ninetoothed_ninetoothed_tensor_2_size_2": "i64",
+    "ninetoothed_ninetoothed_tensor_2_stride_0": "i64",
+    "ninetoothed_ninetoothed_tensor_2_stride_1": "i64",
+    "ninetoothed_ninetoothed_tensor_2_stride_2": "i64",
+    "ninetoothed_ninetoothed_tensor_2_stride_3": "i64",
+    "ninetoothed_ninetoothed_tensor_3_pointer": "*fp16",
+    "ninetoothed_ninetoothed_tensor_3_size_0": "i64",
+    "ninetoothed_ninetoothed_tensor_3_size_1": "i64",
+    "ninetoothed_ninetoothed_tensor_3_size_2": "i64",
+    "ninetoothed_ninetoothed_tensor_3_stride_0": "i64",
+    "ninetoothed_ninetoothed_tensor_3_stride_1": "i64",
+    "ninetoothed_ninetoothed_tensor_3_stride_2": "i64",
+    "ninetoothed_ninetoothed_tensor_3_stride_3": "i64",
+    "ninetoothed_ninetoothed_tensor_4_pointer": "*fp16",
+    "ninetoothed_ninetoothed_tensor_4_size_0": "i64",
+    "ninetoothed_ninetoothed_tensor_4_size_1": "i64",
+    "ninetoothed_ninetoothed_tensor_4_size_2": "i64",
+    "ninetoothed_ninetoothed_tensor_4_stride_0": "i64",
+    "ninetoothed_ninetoothed_tensor_4_stride_1": "i64",
+    "ninetoothed_ninetoothed_tensor_4_stride_2": "i64",
+    "ninetoothed_ninetoothed_tensor_4_stride_3": "i64",
+    "ninetoothed_ninetoothed_tensor_5_pointer": "*i32",
+    "ninetoothed_ninetoothed_tensor_5_size_0": "i64",
+    "ninetoothed_ninetoothed_tensor_5_stride_0": "i64",
+    "ninetoothed_tensor_10": "fp64"
+  },
+  "constexprs": {
+    "ninetoothed_constexpr_prefix_ninetoothed_tensor_11": false,
+    "ninetoothed_constexpr_prefix_ninetoothed_tensor_12": false,
+    "ninetoothed_constexpr_prefix_ninetoothed_tensor_13": 2
+  },
+  "dynamic": [
+    {
+      "name": "ninetoothed_ninetoothed_tensor_0_pointer",
+      "type": "*fp16",
+      "expr": [
+        "input",
+        "q"
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_0_size_0",
+      "type": "i64",
+      "expr": [
+        "size",
+        "q",
+        0
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_0_size_1",
+      "type": "i64",
+      "expr": [
+        "size",
+        "q",
+        1
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_0_size_2",
+      "type": "i64",
+      "expr": [
+        "size",
+        "q",
+        2
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_0_stride_0",
+      "type": "i64",
+      "expr": [
+        "stride",
+        "q",
+        0
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_0_stride_1",
+      "type": "i64",
+      "expr": [
+        "stride",
+        "q",
+        1
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_0_stride_2",
+      "type": "i64",
+      "expr": [
+        "stride",
+        "q",
+        2
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_0_stride_3",
+      "type": "i64",
+      "expr": [
+        "stride",
+        "q",
+        3
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_1_pointer",
+      "type": "*fp16",
+      "expr": [
+        "input",
+        "k"
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_1_size_0",
+      "type": "i64",
+      "expr": [
+        "size",
+        "k",
+        0
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_1_size_1",
+      "type": "i64",
+      "expr": [
+        "size",
+        "k",
+        1
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_1_size_2",
+      "type": "i64",
+      "expr": [
+        "size",
+        "k",
+        2
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_1_stride_0",
+      "type": "i64",
+      "expr": [
+        "stride",
+        "k",
+        0
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_1_stride_1",
+      "type": "i64",
+      "expr": [
+        "stride",
+        "k",
+        1
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_1_stride_2",
+      "type": "i64",
+      "expr": [
+        "stride",
+        "k",
+        2
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_1_stride_3",
+      "type": "i64",
+      "expr": [
+        "stride",
+        "k",
+        3
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_2_pointer",
+      "type": "*fp16",
+      "expr": [
+        "input",
+        "v"
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_2_size_0",
+      "type": "i64",
+      "expr": [
+        "size",
+        "v",
+        0
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_2_size_1",
+      "type": "i64",
+      "expr": [
+        "size",
+        "v",
+        1
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_2_size_2",
+      "type": "i64",
+      "expr": [
+        "size",
+        "v",
+        2
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_2_stride_0",
+      "type": "i64",
+      "expr": [
+        "stride",
+        "v",
+        0
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_2_stride_1",
+      "type": "i64",
+      "expr": [
+        "stride",
+        "v",
+        1
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_2_stride_2",
+      "type": "i64",
+      "expr": [
+        "stride",
+        "v",
+        2
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_2_stride_3",
+      "type": "i64",
+      "expr": [
+        "stride",
+        "v",
+        3
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_3_pointer",
+      "type": "*fp16",
+      "expr": [
+        "input",
+        "mask"
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_3_size_0",
+      "type": "i64",
+      "expr": [
+        "size",
+        "mask",
+        0
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_3_size_1",
+      "type": "i64",
+      "expr": [
+        "size",
+        "mask",
+        1
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_3_size_2",
+      "type": "i64",
+      "expr": [
+        "size",
+        "mask",
+        2
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_3_stride_0",
+      "type": "i64",
+      "expr": [
+        "stride",
+        "mask",
+        0
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_3_stride_1",
+      "type": "i64",
+      "expr": [
+        "stride",
+        "mask",
+        1
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_3_stride_2",
+      "type": "i64",
+      "expr": [
+        "stride",
+        "mask",
+        2
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_3_stride_3",
+      "type": "i64",
+      "expr": [
+        "stride",
+        "mask",
+        3
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_4_pointer",
+      "type": "*fp16",
+      "expr": [
+        "input",
+        "out"
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_4_size_0",
+      "type": "i64",
+      "expr": [
+        "size",
+        "out",
+        0
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_4_size_1",
+      "type": "i64",
+      "expr": [
+        "size",
+        "out",
+        1
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_4_size_2",
+      "type": "i64",
+      "expr": [
+        "size",
+        "out",
+        2
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_4_stride_0",
+      "type": "i64",
+      "expr": [
+        "stride",
+        "out",
+        0
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_4_stride_1",
+      "type": "i64",
+      "expr": [
+        "stride",
+        "out",
+        1
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_4_stride_2",
+      "type": "i64",
+      "expr": [
+        "stride",
+        "out",
+        2
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_4_stride_3",
+      "type": "i64",
+      "expr": [
+        "stride",
+        "out",
+        3
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_5_pointer",
+      "type": "*i32",
+      "expr": [
+        "input",
+        "length"
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_5_size_0",
+      "type": "i64",
+      "expr": [
+        "size",
+        "length",
+        0
+      ]
+    },
+    {
+      "name": "ninetoothed_ninetoothed_tensor_5_stride_0",
+      "type": "i64",
+      "expr": [
+        "stride",
+        "length",
+        0
+      ]
+    },
+    {
+      "name": "ninetoothed_tensor_10",
+      "type": "fp64",
+      "expr": [
+        "input",
+        "scale"
+      ]
+    }
+  ],
+  "grid": [
+    "Mult",
+    [
+      "Mult",
+      [
+        "Add",
+        [
+          "Sub",
+          [
+            "Add",
+            [
+              "Sub",
+              [
+                "Add",
+                [
+                  "Sub",
+                  [
+                    "Add",
+                    [
+                      "Sub",
+                      [
+                        "size",
+                        "q",
+                        0
+                      ],
+                      [
+                        "int",
+                        1
+                      ]
+                    ],
+                    [
+                      "int",
+                      1
+                    ]
+                  ],
+                  [
+                    "int",
+                    1
+                  ]
+                ],
+                [
+                  "int",
+                  1
+                ]
+              ],
+              [
+                "int",
+                1
+              ]
+            ],
+            [
+              "int",
+              1
+            ]
+          ],
+          [
+            "int",
+            1
+          ]
+        ],
+        [
+          "int",
+          1
+        ]
+      ],
+      [
+        "Add",
+        [
+          "FloorDiv",
+          [
+            "Sub",
+            [
+              "Add",
+              [
+                "Sub",
+                [
+                  "Sub",
+                  [
+                    "Add",
+                    [
+                      "Sub",
+                      [
+                        "Add",
+                        [
+                          "Sub",
+                          [
+                            "size",
+                            "q",
+                            1
+                          ],
+                          [
+                            "int",
+                            1
+                          ]
+                        ],
+                        [
+                          "int",
+                          1
+                        ]
+                      ],
+                      [
+                        "int",
+                        1
+                      ]
+                    ],
+                    [
+                      "int",
+                      1
+                    ]
+                  ],
+                  [
+                    "Sub",
+                    [
+                      "FloorDiv",
+                      [
+                        "size",
+                        "q",
+                        1
+                      ],
+                      [
+                        "size",
+                        "k",
+                        1
+                      ]
+                    ],
+                    [
+                      "int",
+                      1
+                    ]
+                  ]
+                ],
+                [
+                  "int",
+                  1
+                ]
+              ],
+              [
+                "FloorDiv",
+                [
+                  "size",
+                  "q",
+                  1
+                ],
+                [
+                  "size",
+                  "k",
+                  1
+                ]
+              ]
+            ],
+            [
+              "int",
+              1
+            ]
+          ],
+          [
+            "FloorDiv",
+            [
+              "size",
+              "q",
+              1
+            ],
+            [
+              "size",
+              "k",
+              1
+            ]
+          ]
+        ],
+        [
+          "int",
+          1
+        ]
+      ]
+    ],
+    [
+      "Add",
+      [
+        "Sub",
+        [
+          "Add",
+          [
+            "Sub",
+            [
+              "Add",
+              [
+                "FloorDiv",
+                [
+                  "Sub",
+                  [
+                    "Add",
+                    [
+                      "Sub",
+                      [
+                        "Sub",
+                        [
+                          "size",
+                          "q",
+                          2
+                        ],
+                        [
+                          "int",
+                          31
+                        ]
+                      ],
+                      [
+                        "int",
+                        1
+                      ]
+                    ],
+                    [
+                      "int",
+                      32
+                    ]
+                  ],
+                  [
+                    "int",
+                    1
+                  ]
+                ],
+                [
+                  "int",
+                  32
+                ]
+              ],
+              [
+                "int",
+                1
+              ]
+            ],
+            [
+              "int",
+              1
+            ]
+          ],
+          [
+            "int",
+            1
+          ]
+        ],
+        [
+          "int",
+          1
+        ]
+      ],
+      [
+        "int",
+        1
+      ]
+    ]
+  ],
+  "profile": "no-cache-no-mask-nine-0.26-attention-47args-v1",
+  "head_dim": 64
+}

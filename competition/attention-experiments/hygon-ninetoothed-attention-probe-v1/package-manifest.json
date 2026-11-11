@@ -1,0 +1,33 @@
+{
+  "version": "1.2-ceil-div",
+  "validation_scope": "source-upload-not-device-verified",
+  "upstream": {
+    "commit": "f32e2fbb2a9b2ca912b5711f4f3836c403196a74",
+    "path": "src/infiniop/ops/flash_attention/ninetoothed/flash_attention.py",
+    "sha256": "b0039b78b9693b32fec36701424a9773b72aeb0688fe5d52c58faa99f428f1ca",
+    "modified": false
+  },
+  "candidate": {
+    "profile": "positive-dynamic-kv-ceiling-div-v1",
+    "modified": true,
+    "original_sha256": "b0039b78b9693b32fec36701424a9773b72aeb0688fe5d52c58faa99f428f1ca",
+    "candidate_sha256": "5378d0f8dfa5c34aac83413e34094863864b273cbfb2bad4e43729c5748738c4",
+    "original_expression": "for j in range(-(-actual_kv_len // key.dtype.shape[0])):",
+    "candidate_expression": "for j in range((actual_kv_len + key.dtype.shape[0] - 1) // key.dtype.shape[0]):",
+    "compilation": "NineToothed expression and generation chain"
+  },
+  "files": {
+    "attention_contract.py": "b1e377f36c573e7f6c711d1d10b9afe61e335019737ff9b64eef2b62be6df8c2",
+    "probe_primitives.py": "eb8cec89f96d037fc3ede8a76343d37cba584b79f134256ad947f63d9e831d59",
+    "run_attention_probe.py": "626b9ee4c96af7ecf623ecb8f70e14d74ca405e17c27af908aac71710a01403e",
+    "attention_worker.py": "8b781c563deace38cd9e41763cdcbfaa945ec77a453a84265ef881192b8ab401",
+    "llvm_compat.py": "b5d50f942fbb430ee65fe527c68964f8ac7c94f8a4b4947b83b7c65032f29e68",
+    "run_hygon_ninetoothed_attention.sh": "9c49ffc1fe6ca7c9e33a60621ded35da7fca3cec39a29d95ec6344bf143ced11",
+    "upstream_attention.py": "b0039b78b9693b32fec36701424a9773b72aeb0688fe5d52c58faa99f428f1ca",
+    "candidate_attention.py": "5378d0f8dfa5c34aac83413e34094863864b273cbfb2bad4e43729c5748738c4",
+    "install_ninetoothed_gfx936.py": "eed758330bc66546c2235d02109f48efbd5b88c3d2e666557ee4269e3bd749a9",
+    "install_infinilm_private_runtime.py": "e7b811dba6fd51d1f52558bb7b93d89817c4dfd8db5da4449a27d60ae84cfe18",
+    "LICENSE-InfiniCore-MIT.txt": "aa87e0f6ee3319a25f7986b65879e59a3449611ae2a483bd29133f3ea59f721a",
+    "UPLOAD.md": "b0cc4c61919e2b8bc59d52ed0858cdab32a184af419d7ed5c82be09aed6860be"
+  }
+}
